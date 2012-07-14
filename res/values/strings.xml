@@ -8,5 +8,6 @@
     <string name="home_content">Touch to go home.</string>
     <string name="recent_apps_content_title">RECENT APPS</string>
     <string name="recent_apps_content">Touch to select recent apps.</string>
+    <string name="can_not_start_recent_app">"Can't switch to this app. This app has some problem."</string>
 
 </resources>

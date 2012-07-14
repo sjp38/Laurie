@@ -8,5 +8,6 @@
     <string name="home_content">홈스크린으로 이동</string>
     <string name="recent_apps_content_title">RECENT APPS</string>
     <string name="recent_apps_content">최근 실행한 앱</string>
+    <string name="can_not_start_recent_app">"이 앱을 시작할 수 없습니다. 이 앱에는 뭔가 문제가 있는 것 같습니다."</string>
 
 </resources>

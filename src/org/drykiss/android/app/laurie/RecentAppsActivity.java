@@ -20,6 +20,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -100,12 +101,19 @@ public class RecentAppsActivity extends Activity {
                         if (tag.intent != null) {
                             tag.intent.addFlags(Intent.FLAG_ACTIVITY_LAUNCHED_FROM_HISTORY
                                     | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+                            boolean hasProblem = false;
                             try {
                                 mContext.startActivity(tag.intent);
-                            } catch (ActivityNotFoundException e) {
+                            } catch (Exception e) {
+                                hasProblem = true;
+                                Toast.makeText(RecentAppsActivity.this,
+                                        R.string.can_not_start_recent_app, Toast.LENGTH_SHORT)
+                                        .show();
                                 Log.w(TAG, "Unable to launch recent task", e);
                             } finally {
-                                finish();
+                                if (!hasProblem) {
+                                    finish();
+                                }
                             }
                         }
 
