@@ -4,12 +4,13 @@ package org.drykiss.android.app.laurie;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ActivityManager.RecentTaskInfo;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -49,6 +50,11 @@ public class RecentAppsActivity extends Activity {
 
     private class RecentAppsAdapter extends BaseAdapter {
         private static final int MAX_RECENT_TASKS = 20;
+
+        private final int mIconWidth = (int) getResources().getDimension(
+                R.dimen.recent_app_icon_width);
+        private final int mIconHeight = (int) getResources().getDimension(
+                R.dimen.recent_app_icon_height);
 
         private Context mContext;
         private ArrayList<RecentTag> mRecentTags = new ArrayList<RecentTag>();
@@ -165,6 +171,9 @@ public class RecentAppsActivity extends Activity {
                     final ActivityInfo activityInfo = resolveInfo.activityInfo;
                     final String title = activityInfo.loadLabel(pm).toString();
                     Drawable icon = activityInfo.loadIcon(pm);
+                    Bitmap bitmap = ((BitmapDrawable) icon).getBitmap();
+                    icon = new BitmapDrawable(Bitmap.createScaledBitmap(bitmap, mIconWidth,
+                            mIconHeight, true));
 
                     if (title != null && title.length() > 0 && icon != null) {
                         mRecentTags.add(new RecentTag(title, icon, info, intent));

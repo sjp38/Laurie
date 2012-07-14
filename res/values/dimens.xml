@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="recent_app_icon_width">82dip</dimen>
+    <dimen name="recent_app_icon_height">82dip</dimen>
+
+</resources>
