@@ -128,6 +128,7 @@ public class RecentAppsActivity extends Activity {
             RecentTag tag = (RecentTag) getItem(position);
             holder.textView.setText(tag.title);
             holder.icon.setImageDrawable(tag.icon);
+            holder.id = position;
 
             return convertView;
         }
