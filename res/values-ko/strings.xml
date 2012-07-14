@@ -2,9 +2,11 @@
 <resources>
 
     <string name="app_name">별장 버튼</string>
-    <string name="description">이제 노티피케이션 바를 이용해 HOME 버튼을 사용할 수 있습니다.</string>
+    <string name="description">이제 노티피케이션 바를 이용해 HOME, RECENT APPS 버튼을 사용할 수 있습니다.</string>
     <string name="ticker"></string>
-    <string name="content_title">HOME</string>
-    <string name="content">터치하면 HOME 버튼처럼 동작합니다.</string>
+    <string name="home_content_title">HOME</string>
+    <string name="home_content">홈스크린으로 이동</string>
+    <string name="recent_apps_content_title">RECENT APPS</string>
+    <string name="recent_apps_content">최근 실행한 앱</string>
 
 </resources>

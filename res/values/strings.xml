@@ -2,9 +2,11 @@
 <resources>
 
     <string name="app_name">Villa button</string>
-    <string name="description">You can use HOME button from notification bar, now.</string>
+    <string name="description">You can use HOME, RECENT APPS button from notification bar, now.</string>
     <string name="ticker"></string>
-    <string name="content_title">HOME</string>
-    <string name="content">Touch to go home.</string>
+    <string name="home_content_title">HOME</string>
+    <string name="home_content">Touch to go home.</string>
+    <string name="recent_apps_content_title">RECENT APPS</string>
+    <string name="recent_apps_content">Touch to select recent apps.</string>
 
 </resources>
