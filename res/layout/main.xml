@@ -6,16 +6,33 @@
     android:orientation="vertical" >
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/noticeTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/description"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
+        <CheckBox
+            android:id="@+id/homeFeatureCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/noticeTextView"
+            android:text="@string/onOffHomeButton" />
+
+        <CheckBox
+            android:id="@+id/recentAppsFeaturecheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/homeFeatureCheckBox"
+            android:text="@string/onOffRecentAppsButton" />
     </LinearLayout>
 
     <LinearLayout
@@ -23,8 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:baselineAligned="true" >
+        android:baselineAligned="true"
+        android:gravity="center" >
     </LinearLayout>
 
 </RelativeLayout>
